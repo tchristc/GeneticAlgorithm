@@ -86,7 +86,7 @@ namespace GeneticAlgorithm.Tests
         }
 
         [TestMethod]
-        public void RunOneGenerationWithSuccessfulTerminationAndNoCrossover()
+        public void RunOneGenerationWithSuccessfulTerminationAndNoCrossaddover()
         {
             var population = new Population<int>(
                 new List<Chromosome<int>> { new Chromosome<int>(0, 0.5), new Chromosome<int>(0, 0.5) });
