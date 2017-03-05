@@ -45,9 +45,16 @@ namespace ExpressionLib.Console
             if (string.IsNullOrEmpty(exp))
                 return false;
             //throw new ArgumentNullException(nameof(exp));
-
-            expression = DynamicExpression.ParseLambda(new ParameterExpression[] {}, null, exp);
-            t = (T)((LambdaExpression)expression).Compile().DynamicInvoke();
+            try
+            {
+                var x = Expression.Parameter(typeof(int), "x");
+                expression = DynamicExpression.ParseLambda(new [] {x}, null, exp);
+                t = (T)((LambdaExpression)expression).Compile().DynamicInvoke(5);
+            }catch(Exception ex)
+            {
+                System.Console.WriteLine("Exception: " + ex);
+                return false;
+            }
 
             return true;
         }
