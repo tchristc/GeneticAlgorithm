@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 using DynamicExpression = System.Linq.Dynamic.DynamicExpression;
 
@@ -47,9 +48,14 @@ namespace ExpressionLib.Console
             //throw new ArgumentNullException(nameof(exp));
             try
             {
+                var externals = new Dictionary<string, object>
+                {
+                    {"x", 5}
+                };
                 var i = 5;
-                var x = Expression.Parameter(typeof(T), "x");
-                expression = DynamicExpression.ParseLambda(new [] {x}, null, exp);
+                //var x = Expression.Parameter(typeof(T), "x");
+                //expression = DynamicExpression.ParseLambda(new [] {x}, null, exp);
+                expression = DynamicExpression.ParseLambda(typeof(double), typeof(double), exp, externals);
                 t = (T)((LambdaExpression)expression).Compile().DynamicInvoke(i);
             }catch(Exception ex)
             {
