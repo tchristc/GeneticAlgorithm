@@ -28,7 +28,7 @@ namespace ExpressionLib.Console
                 System.Console.Write("Input an Expression: ");
                 input = System.Console.ReadLine();
                 Expression e;
-                int result;
+                double result;
                 input.TryParse(out e, out result);
                 System.Console.WriteLine(e + " = " + result);
             } while (!string.IsNullOrEmpty(input) || input == "q");
@@ -47,9 +47,10 @@ namespace ExpressionLib.Console
             //throw new ArgumentNullException(nameof(exp));
             try
             {
-                var x = Expression.Parameter(typeof(int), "x");
+                var i = 5;
+                var x = Expression.Parameter(typeof(T), "x");
                 expression = DynamicExpression.ParseLambda(new [] {x}, null, exp);
-                t = (T)((LambdaExpression)expression).Compile().DynamicInvoke(5);
+                t = (T)((LambdaExpression)expression).Compile().DynamicInvoke(i);
             }catch(Exception ex)
             {
                 System.Console.WriteLine("Exception: " + ex);
