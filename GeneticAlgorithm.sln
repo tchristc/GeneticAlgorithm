@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCalc.Play", "Evaluant.Calc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCalc.Tests", "Evaluant.Calculator.Tests\NCalc.Tests.csproj", "{F8E5E800-F842-4F84-A0C6-B3E1E5DB2BB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R.Console", "R.Console\R.Console.csproj", "{937D87B8-5F72-49C7-96C1-EF60BDD2B5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Script", "Script\Script.csproj", "{F4CB3FD6-DFFB-4E49-9C79-7E594BE043FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{F8E5E800-F842-4F84-A0C6-B3E1E5DB2BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E5E800-F842-4F84-A0C6-B3E1E5DB2BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E5E800-F842-4F84-A0C6-B3E1E5DB2BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937D87B8-5F72-49C7-96C1-EF60BDD2B5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937D87B8-5F72-49C7-96C1-EF60BDD2B5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937D87B8-5F72-49C7-96C1-EF60BDD2B5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937D87B8-5F72-49C7-96C1-EF60BDD2B5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4CB3FD6-DFFB-4E49-9C79-7E594BE043FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4CB3FD6-DFFB-4E49-9C79-7E594BE043FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4CB3FD6-DFFB-4E49-9C79-7E594BE043FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4CB3FD6-DFFB-4E49-9C79-7E594BE043FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

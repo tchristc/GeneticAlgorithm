@@ -50,13 +50,12 @@ namespace ExpressionLib.Console
             {
                 var externals = new Dictionary<string, object>
                 {
-                    {"x", 5}
+                    {"x", 5},
+                    {"y", Math.PI}
                 };
-                var i = 5;
-                //var x = Expression.Parameter(typeof(T), "x");
-                //expression = DynamicExpression.ParseLambda(new [] {x}, null, exp);
-                expression = DynamicExpression.ParseLambda(typeof(double), typeof(double), exp, externals);
-                t = (T)((LambdaExpression)expression).Compile().DynamicInvoke(i);
+                externals["x"] = 6;
+                expression = DynamicExpression.ParseLambda(new ParameterExpression[] {}, typeof(T), exp, externals);
+                t = (T)((LambdaExpression)expression).Compile().DynamicInvoke();
             }catch(Exception ex)
             {
                 System.Console.WriteLine("Exception: " + ex);
