@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.CodeAnalysis.Scripting;
 using Script;
 
 namespace R
